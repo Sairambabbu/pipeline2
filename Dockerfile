@@ -1,6 +1,5 @@
 FROM amazonlinux
 RUN yum install java -y
 RUN yum install httpd -y
-RUN systemctl start httpd
-RUN systemctl enable httpd
+RUN service httpd start
 COPY mycode.html /var/www/html/mycode.html
